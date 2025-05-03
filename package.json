@@ -1,0 +1,42 @@
+{
+  "name": "template-vue-ts",
+  "description": "",
+  "version": "0.0.1",
+  "scripts": {
+    "check": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "prettier --write src/",
+    "dev": "node log.js dev & vite --config vite/config.dev.mjs --host",
+    "build": "node log.js build & vite build --config vite/config.prod.mjs",
+    "dev-nolog": "vite --config vite/config.dev.mjs --host",
+    "build-nolog": "vite build --config vite/config.prod.mjs",
+    "start": "npm run build && npx serve dist -s -l 4000",
+    "kill": "kill -9 $(lsof -ti:8080)",
+    "kill-s": "kill -9 $(lsof -ti:4000)"
+  },
+  "dependencies": {
+    "phaser": "^3.88.2",
+    "phaser-font-plugin": "^0.1.1",
+    "phaser3-rex-plugins": "^1.80.15",
+    "pinia": "^3.0.2",
+    "vue": "3.5.13"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.11.0",
+    "@types/node": "^20.11.20",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "@vitejs/plugin-vue": "^5.2.2",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "@vue/eslint-config-typescript": "^13.0.0",
+    "@vue/tsconfig": "^0.7.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-vue": "^9.23.0",
+    "prettier": "^3.2.5",
+    "serve": "^14.2.3",
+    "terser": "^5.31.0",
+    "typescript": "~5.7.2",
+    "vite": "^6.3.1",
+    "vue-tsc": "^2.2.8"
+  }
+}
