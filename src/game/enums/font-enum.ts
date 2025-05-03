@@ -11,4 +11,6 @@ export enum FontEnum {
   RalewayRegular = 'RalewayRegular',
   SFUIDisplayBold = 'SFUIDisplayBold',
   SFUIDisplayRegular = 'SFUIDisplayRegular',
+  HelveticaNowRegular = 'HelveticaNowRegular',
+  HelveticaNowBold = 'HelveticaNowBold',
 }

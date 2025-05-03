@@ -25,5 +25,6 @@ export class Logo extends Phaser.GameObjects.Container {
       translationKey: 'logo_name',
       interpolation: [''],
     });
+    textObject.setResolution(3);
   }
 }

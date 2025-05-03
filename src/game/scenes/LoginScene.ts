@@ -1,9 +1,12 @@
 import * as Phaser from 'phaser';
 import { EventBus } from '../EventBus';
-import { ImageEnum } from '../enums/image-enum';
 import { Scene } from 'phaser';
 import { SceneEnum } from '../enums/scene-enum';
 import { Version } from '../shared/Version';
+import { Background } from '../shared/Background';
+import { Logo } from '../shared/Logo';
+import { Button1 } from '../shared/Button1';
+import { Footer } from '../shared/Footer';
 
 export class LoginScene extends Scene {
   constructor() {
@@ -11,14 +14,33 @@ export class LoginScene extends Scene {
   }
 
   init() {
-    const backgroundImage = this.add.image(0, 0, ImageEnum.Background).setOrigin(0);
-    backgroundImage.setDisplaySize(this.cameras.main.width, this.cameras.main.height);
+    new Background(this);
+    new Logo(this);
+    new Version(this);
+    this.createStartButton();
+    new Footer(this);
   }
 
   create() {
-    new Version(this);
     EventBus.emit('current-scene-ready', this);
   }
 
   update() {}
+
+  private createStartButton(): void {
+    const { width, height } = this.scale;
+    const button = new Button1(this);
+    button.create({
+      positionX: width / 2,
+      positionY: height / 2,
+      text: 'Iniciar',
+      key: 'start_button',
+      scaleX: 0.3,
+      scaleY: 1.2,
+    });
+    button.onPointerDown(() => {
+      // this.scene.start(SceneEnum.Register);
+      console.log('Hello');
+    });
+  }
 }

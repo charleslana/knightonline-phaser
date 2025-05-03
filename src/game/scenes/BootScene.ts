@@ -11,6 +11,8 @@ export class BootScene extends Scene {
 
   preload() {
     this.load.image(ImageEnum.Background, 'assets/images/background.jpeg');
+    this.load.image(ImageEnum.LoadingBar, 'assets/images/bars/loading_bar.png');
+    this.load.image(ImageEnum.LoadingFullBar, 'assets/images/bars/loading_full_bar.png');
     this.loadFonts();
     this.loadTranslation();
   }
@@ -48,6 +50,8 @@ export class BootScene extends Scene {
     this.load.font(FontEnum.RalewayRegular, 'assets/fonts/Raleway/Raleway-Regular.ttf');
     this.load.font(FontEnum.SFUIDisplayBold, 'assets/fonts/SFUIDisplay/SFUIDisplay-Bold.ttf');
     this.load.font(FontEnum.SFUIDisplayRegular, 'assets/fonts/SFUIDisplay/SFUIDisplay-Regular.ttf');
+    this.load.font(FontEnum.HelveticaNowBold, 'assets/fonts/HelveticaNow/HelveticaNowText-Bold.ttf');
+    this.load.font(FontEnum.HelveticaNowRegular, 'assets/fonts/HelveticaNow/HelveticaNowText-Regular.ttf');
   }
 
   private createLoadingText(): void {

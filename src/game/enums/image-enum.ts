@@ -1,5 +1,9 @@
 export enum ImageEnum {
   Background = 'Background',
+  LoadingBar = 'LoadingBar',
+  LoadingFullBar = 'LoadingFullBar',
+  Button1 = 'Button1',
+  Button1Hover = 'Button1Hover',
 }
 
 export function getImageEnum(value: string): string {
