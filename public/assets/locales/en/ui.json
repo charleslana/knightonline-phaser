@@ -2,5 +2,6 @@
   "logo_name": "Knight Online",
   "loading": "Loading{{0}}",
   "version": "version {{0}}",
-  "start_button": "Start game"
+  "start_button": "Start game",
+  "login_text": "Login in your account"
 }

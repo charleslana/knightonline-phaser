@@ -27,11 +27,13 @@ export class PreloaderScene extends Scene {
 
   preload() {
     this.load.setPath('assets');
-    for (let index = 0; index < 50; index++) {
-      this.load.image(`teste_image_${index}`, 'images/background.jpeg');
-    }
+    // for (let index = 0; index < 50; index++) {
+    //   this.load.image(`teste_image_${index}`, 'images/background.jpeg');
+    // }
     this.load.image(ImageEnum.Button1, 'images/buttons/button1.png');
     this.load.image(ImageEnum.Button1Hover, 'images/buttons/button1_hover.png');
+    this.load.image(ImageEnum.CloseIcon, 'images/icons/close_icon.png');
+    this.load.image(ImageEnum.ModalBackground, 'images/modal_background.png');
   }
 
   create() {

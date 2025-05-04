@@ -4,6 +4,8 @@ export enum ImageEnum {
   LoadingFullBar = 'LoadingFullBar',
   Button1 = 'Button1',
   Button1Hover = 'Button1Hover',
+  CloseIcon = 'CloseIcon',
+  ModalBackground = 'ModalBackground',
 }
 
 export function getImageEnum(value: string): string {

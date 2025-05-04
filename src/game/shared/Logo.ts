@@ -26,5 +26,22 @@ export class Logo extends Phaser.GameObjects.Container {
       interpolation: [''],
     });
     textObject.setResolution(3);
+    // this.scene.tweens.add({
+    //   targets: textObject,
+    //   alpha: 0,
+    //   duration: 1000,
+    //   ease: Phaser.Math.Easing.Sine.InOut,
+    //   yoyo: true,
+    //   repeat: -1,
+    // });
+    // this.scene.tweens.add({
+    //   targets: textObject,
+    //   scaleX: 1.05,
+    //   scaleY: 1.05,
+    //   yoyo: true,
+    //   repeat: -1,
+    //   duration: 1200,
+    //   ease: Phaser.Math.Easing.Sine.InOut,
+    // });
   }
 }
