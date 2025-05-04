@@ -90,7 +90,7 @@ export class LoginScene extends Scene {
       .text(width / 2, height / 5, 'Faça login para entrar', {
         fontFamily: FontEnum.AlineaSans,
         fontSize: '25px',
-        color: '#000000',
+        color: '#ffffff',
         align: 'center',
         wordWrap: { width: maxTextWidth, useAdvancedWrap: true },
       })
@@ -98,6 +98,7 @@ export class LoginScene extends Scene {
     this.loginText.translation = this.translation.add(this.loginText, {
       translationKey: 'login_text',
     });
+    this.loginText.setResolution(3);
   }
 
   private hideLoginText(): void {
